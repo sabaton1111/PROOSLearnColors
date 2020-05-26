@@ -15,6 +15,7 @@ namespace PROOSLearnColors.Fragments
 {
     public class LevelOneFragment : Android.Support.V4.App.Fragment
     {
+        private MediaPlayer player;
         private Block leftBlock = new Block();
         private Block rightBlock = new Block();
 
@@ -47,6 +48,8 @@ namespace PROOSLearnColors.Fragments
             leftBlock.Color = view.FindViewById<ImageView>(Resource.Id.imageViewLeftBox);
             rightBlock.Color = view.FindViewById<ImageView>(Resource.Id.imageViewRightBox);
             GenerateRandomColorAndSetPlayer(leftBlock, rightBlock);
+            leftBlock.Color.Click += LeftBlock_Click;
+            rightBlock.Color.Click += RightBlock_Click;
 
             int correctAnswer = DecideCorrecttAnswer();
             if (correctAnswer == 0)
@@ -70,6 +73,42 @@ namespace PROOSLearnColors.Fragments
             return view;
         }
 
+        private void LeftBlock_Click(object sender, EventArgs e)
+        {
+            player = MediaPlayer.Create(Activity, Resource.Raw.plop_sound);
+            player.Start();
+            if (leftBlock.IsCorrectAnswer)
+            {
+                player = MediaPlayer.Create(Activity, Resource.Raw.correctAnswer);
+                player.Start();
+                Android.Support.V4.App.Fragment fragmentLogin = new LevelOneFragment();
+                FragmentManager.BeginTransaction().Replace(Resource.Id.parent_fragment, fragmentLogin).Commit();
+            }
+            else
+            {
+                player = MediaPlayer.Create(Activity, Resource.Raw.hmmThinkAgain);
+                player.Start();
+            }            
+        }
+
+        private void RightBlock_Click(object sender, EventArgs e)
+        {
+            player = MediaPlayer.Create(Activity, Resource.Raw.plop_sound);
+            player.Start();
+            if (rightBlock.IsCorrectAnswer)
+            {
+                player = MediaPlayer.Create(Activity, Resource.Raw.correctAnswer);
+                player.Start();
+                Android.Support.V4.App.Fragment fragmentLogin = new LevelOneFragment();
+                FragmentManager.BeginTransaction().Replace(Resource.Id.parent_fragment, fragmentLogin).Commit();
+            }
+            else
+            {
+                player = MediaPlayer.Create(Activity, Resource.Raw.hmmThinkAgain);
+                player.Start();
+            }
+            
+        }
 
         private void GenerateRandomColorAndSetPlayer(Block leftBlock, Block rightBlock)
         {
