@@ -32,6 +32,8 @@ namespace PROOSLearnColors.Fragments
         {
             player = MediaPlayer.Create(Activity, Resource.Raw.plop_sound);
             player.Start();
+            Android.Support.V4.App.Fragment fragmentLogin = new LevelTwoFragment();
+            FragmentManager.BeginTransaction().Replace(Resource.Id.parent_fragment, fragmentLogin).Commit();
         }
 
         private void LevelOne_Click(object sender, EventArgs e)

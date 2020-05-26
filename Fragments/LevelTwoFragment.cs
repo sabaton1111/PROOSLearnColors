@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace PROOSLearnColors.Fragments
 {
-    class LevelTwoFragment
+    class LevelTwoFragment : Android.Support.V4.App.Fragment
     {
     }
 }

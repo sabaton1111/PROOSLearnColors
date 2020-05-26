@@ -15,7 +15,7 @@ namespace PROOSLearnColors
 {
 	
 	
-	[System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
 	public partial class Resource
 	{
 		
@@ -3237,6 +3237,12 @@ namespace PROOSLearnColors
 			// aapt resource value: 0x7F070079
 			public const int tooltip_frame_light = 2131165305;
 			
+			// aapt resource value: 0x7F07007A
+			public const int white_color = 2131165306;
+			
+			// aapt resource value: 0x7F07007B
+			public const int yellow_color = 2131165307;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -4196,12 +4202,6 @@ namespace PROOSLearnColors
 			
 			// aapt resource value: 0x7F0D000A
 			public const int two = 2131558410;
-			
-			// aapt resource value: 0x7F0D000B
-			public const int white_color = 2131558411;
-			
-			// aapt resource value: 0x7F0D000C
-			public const int yellow_color = 2131558412;
 			
 			static Mipmap()
 			{

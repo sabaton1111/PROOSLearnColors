@@ -15,59 +15,149 @@ namespace PROOSLearnColors.Fragments
 {
     public class LevelOneFragment : Android.Support.V4.App.Fragment
     {
-        private MediaPlayer player;
-        private ImageView leftColor;
-        private ImageView rightColor;
+        private Block leftBlock = new Block();
+        private Block rightBlock = new Block();
 
-        private ImageView[] colors = new ImageView[] { };
+        private class Block
+        {
+            private ImageView color;
+            private bool isCorrectAnswer;
+            private MediaPlayer player;
+
+            public Block()
+            {
+                isCorrectAnswer = false;
+            }
+
+            public Block(ImageView color, bool isCorrectAnswer, MediaPlayer player)
+            {
+                this.Color = color;
+                this.IsCorrectAnswer = isCorrectAnswer;
+                this.Player = player;
+            }
+
+            public ImageView Color { get => color; set => color = value; }
+            public bool IsCorrectAnswer { get => isCorrectAnswer; set => isCorrectAnswer = value; }
+            public MediaPlayer Player { get => player; set => player = value; }
+        }
+
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             View view = inflater.Inflate(Resource.Layout.level_one_fragment, container, false);
-            leftColor = view.FindViewById<ImageView>(Resource.Id.imageViewLeftBox);
-            rightColor = view.FindViewById<ImageView>(Resource.Id.imageViewRightBox);
-            GenerateRandomColor(leftColor, rightColor);
+            leftBlock.Color = view.FindViewById<ImageView>(Resource.Id.imageViewLeftBox);
+            rightBlock.Color = view.FindViewById<ImageView>(Resource.Id.imageViewRightBox);
+            GenerateRandomColorAndSetPlayer(leftBlock, rightBlock);
+
+            int correctAnswer = DecideCorrecttAnswer();
+            if (correctAnswer == 0)
+            {
+                leftBlock.IsCorrectAnswer = true;
+            }
+            else
+            {
+                rightBlock.IsCorrectAnswer = true;
+            }
+
+            if (leftBlock.IsCorrectAnswer)
+            {
+                leftBlock.Player.Start();
+            }
+            else
+            {
+                rightBlock.Player.Start();
+            }
 
             return view;
         }
 
-        //Playing sound from raw folder (in Resources)
-        private void GreenColor()
-        {
-            player = MediaPlayer.Create(Activity, Resource.Raw.greenColor);
-            player.Start();
-        }
-        private void GenerateRandomColor(ImageView leftColor, ImageView rightColor)
+
+        private void GenerateRandomColorAndSetPlayer(Block leftBlock, Block rightBlock)
         {
             Random rnd = new Random();
-            int pickedColor = rnd.Next(0,1);
-
+            int pickedLeftColor = rnd.Next(0, 6);
+            int pickedRightColor = rnd.Next(0, 6);
+            while (pickedLeftColor == pickedRightColor)
+            {
+                pickedRightColor = rnd.Next(0, 6);
+            }
             //Getting image id(from drawable folder in Resources)
-            int resourceId = Context.Resources.GetIdentifier("green_color", "drawable", Context.PackageName);
+            int resourceId;
 
-            switch (pickedColor)
+            switch (pickedLeftColor)
             {
                 case 0:
                     //setting image background from id 
-                    leftColor.SetImageResource(resourceId);
-                    GreenColor();
+                    resourceId = Context.Resources.GetIdentifier("white_color", "drawable", Context.PackageName);
+                    leftBlock.Color.SetImageResource(resourceId);
+                    leftBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.purpleColor); //have no white voice
                     break;
-                case 1: 
-                    leftColor.SetImageResource(resourceId);
+                case 1:
+                    resourceId = Context.Resources.GetIdentifier("green_color", "drawable", Context.PackageName);
+                    leftBlock.Color.SetImageResource(resourceId);
+                    leftBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.greenColor);
+                    break;
+                case 2:
+                    resourceId = Context.Resources.GetIdentifier("blue_color", "drawable", Context.PackageName);
+                    leftBlock.Color.SetImageResource(resourceId);
+                    leftBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.lightBlueColor);
+                    break;
+                case 3:
+                    resourceId = Context.Resources.GetIdentifier("yellow_color", "drawable", Context.PackageName);
+                    leftBlock.Color.SetImageResource(resourceId);
+                    leftBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.orangeColor);
+                    break;
+                case 4:
+                    resourceId = Context.Resources.GetIdentifier("red_color", "drawable", Context.PackageName);
+                    leftBlock.Color.SetImageResource(resourceId);
+                    leftBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.redColor);
+                    break;
+                case 5:
+                    resourceId = Context.Resources.GetIdentifier("black_color", "drawable", Context.PackageName);
+                    leftBlock.Color.SetImageResource(resourceId);
+                    leftBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.redColor);
                     break;
             }
 
-            //for (int i = 0; i < 6; i++)
-            //{
-                
-            //}
+            switch (pickedRightColor)
+            {
+                case 0:
+                    //setting image background from id 
+                    resourceId = Context.Resources.GetIdentifier("white_color", "drawable", Context.PackageName);
+                    rightBlock.Color.SetImageResource(resourceId);
+                    rightBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.purpleColor);
+                    break;
+                case 1:
+                    resourceId = Context.Resources.GetIdentifier("green_color", "drawable", Context.PackageName);
+                    rightBlock.Color.SetImageResource(resourceId);
+                    rightBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.greenColor);
+                    break;
+                case 2:
+                    resourceId = Context.Resources.GetIdentifier("blue_color", "drawable", Context.PackageName);
+                    rightBlock.Color.SetImageResource(resourceId);
+                    rightBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.lightBlueColor);
+                    break;
+                case 3:
+                    resourceId = Context.Resources.GetIdentifier("yellow_color", "drawable", Context.PackageName);
+                    rightBlock.Color.SetImageResource(resourceId);
+                    rightBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.orangeColor);
+                    break;
+                case 4:
+                    resourceId = Context.Resources.GetIdentifier("red_color", "drawable", Context.PackageName);
+                    rightBlock.Color.SetImageResource(resourceId);
+                    rightBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.redColor);
+                    break;
+                case 5:
+                    resourceId = Context.Resources.GetIdentifier("black_color", "drawable", Context.PackageName);
+                    rightBlock.Color.SetImageResource(resourceId);
+                    rightBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.redColor);
+                    break;
+            }
         }
-        //public void GetColor(ImageView leftColor, ImageView rightColor)
-        //{
-        //    Random rnd = new Random();
-        //    Array colors = Enum.GetValues(typeof(Colors));
-        //    Colors randomValue = (Colors)colors.GetValue(rnd.Next(colors.Length));
-        //  //  leftColor.SetImageResource(Co)
 
-        //}
+        private int DecideCorrecttAnswer()
+        {
+            Random rnd = new Random();
+            return rnd.Next(0, 2); // 0 - Left color is correct, 1 - right
+        }
     }
 }
