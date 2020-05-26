@@ -26,9 +26,11 @@ namespace PROOSLearnColors.Fragments
             leftColor = view.FindViewById<ImageView>(Resource.Id.imageViewLeftBox);
             rightColor = view.FindViewById<ImageView>(Resource.Id.imageViewRightBox);
             GenerateRandomColor(leftColor, rightColor);
-            //GetColor(leftColor, rightColor);
+
             return view;
         }
+
+        //Playing sound from raw folder (in Resources)
         private void GreenColor()
         {
             player = MediaPlayer.Create(Activity, Resource.Raw.greenColor);
@@ -38,11 +40,14 @@ namespace PROOSLearnColors.Fragments
         {
             Random rnd = new Random();
             int pickedColor = rnd.Next(0,1);
+
+            //Getting image id(from drawable folder in Resources)
             int resourceId = Context.Resources.GetIdentifier("green_color", "drawable", Context.PackageName);
 
             switch (pickedColor)
             {
                 case 0:
+                    //setting image background from id 
                     leftColor.SetImageResource(resourceId);
                     GreenColor();
                     break;
