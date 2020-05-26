@@ -89,7 +89,7 @@ namespace PROOSLearnColors.Fragments
                     //setting image background from id 
                     resourceId = Context.Resources.GetIdentifier("white_color", "drawable", Context.PackageName);
                     leftBlock.Color.SetImageResource(resourceId);
-                    leftBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.purpleColor); //have no white voice
+                    leftBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.whiteColor);
                     break;
                 case 1:
                     resourceId = Context.Resources.GetIdentifier("green_color", "drawable", Context.PackageName);
@@ -99,12 +99,12 @@ namespace PROOSLearnColors.Fragments
                 case 2:
                     resourceId = Context.Resources.GetIdentifier("blue_color", "drawable", Context.PackageName);
                     leftBlock.Color.SetImageResource(resourceId);
-                    leftBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.lightBlueColor);
+                    leftBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.blueColor);
                     break;
                 case 3:
                     resourceId = Context.Resources.GetIdentifier("yellow_color", "drawable", Context.PackageName);
                     leftBlock.Color.SetImageResource(resourceId);
-                    leftBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.orangeColor);
+                    leftBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.yellowColor);
                     break;
                 case 4:
                     resourceId = Context.Resources.GetIdentifier("red_color", "drawable", Context.PackageName);
@@ -114,7 +114,7 @@ namespace PROOSLearnColors.Fragments
                 case 5:
                     resourceId = Context.Resources.GetIdentifier("black_color", "drawable", Context.PackageName);
                     leftBlock.Color.SetImageResource(resourceId);
-                    leftBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.redColor);
+                    leftBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.blackColor);
                     break;
             }
 
@@ -124,7 +124,7 @@ namespace PROOSLearnColors.Fragments
                     //setting image background from id 
                     resourceId = Context.Resources.GetIdentifier("white_color", "drawable", Context.PackageName);
                     rightBlock.Color.SetImageResource(resourceId);
-                    rightBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.purpleColor);
+                    rightBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.whiteColor);
                     break;
                 case 1:
                     resourceId = Context.Resources.GetIdentifier("green_color", "drawable", Context.PackageName);
@@ -134,12 +134,12 @@ namespace PROOSLearnColors.Fragments
                 case 2:
                     resourceId = Context.Resources.GetIdentifier("blue_color", "drawable", Context.PackageName);
                     rightBlock.Color.SetImageResource(resourceId);
-                    rightBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.lightBlueColor);
+                    rightBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.blueColor);
                     break;
                 case 3:
                     resourceId = Context.Resources.GetIdentifier("yellow_color", "drawable", Context.PackageName);
                     rightBlock.Color.SetImageResource(resourceId);
-                    rightBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.orangeColor);
+                    rightBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.yellowColor);
                     break;
                 case 4:
                     resourceId = Context.Resources.GetIdentifier("red_color", "drawable", Context.PackageName);
@@ -149,7 +149,7 @@ namespace PROOSLearnColors.Fragments
                 case 5:
                     resourceId = Context.Resources.GetIdentifier("black_color", "drawable", Context.PackageName);
                     rightBlock.Color.SetImageResource(resourceId);
-                    rightBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.redColor);
+                    rightBlock.Player = MediaPlayer.Create(Activity, Resource.Raw.blackColor);
                     break;
             }
         }

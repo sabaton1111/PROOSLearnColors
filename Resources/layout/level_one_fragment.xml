@@ -8,20 +8,24 @@
     android:minWidth="25px"
     android:minHeight="25px">
     <ImageView
-         android:layout_width="300px"
-        android:layout_height="300px"
+        android:layout_width="600px"
+        android:layout_height="600px"
         android:scaleType="centerCrop"
         android:adjustViewBounds="true"
-        android:id="@+id/imageViewLeftBox" />
+        android:id="@+id/imageViewLeftBox" 
+        android:layout_marginTop="200px"
+        android:layout_marginLeft="400px"/>
+        
      <ImageView
-        android:background="@mipmap/question"
-        android:layout_width="200px"
-        android:layout_height="300px"
+        android:layout_width="600px"
+        android:layout_height="600px"
         android:scaleType="centerCrop"
         android:adjustViewBounds="true"
-        android:id="@+id/imageViewLeftBoxds"
-        android:layout_marginLeft="500px"/>
-    <ImageView
+        android:id="@+id/imageViewRightBox"
+        android:layout_marginTop="200px"
+        android:layout_marginLeft="1200px"/>
+
+    <!--<ImageView
         android:background="@mipmap/question"
         android:layout_width="300px"
         android:layout_height="300px"
@@ -40,4 +44,5 @@
         android:id="@+id/imageViewRightskak"
         android:layout_marginTop="0.0dp" 
     android:layout_marginLeft="500px"/>
+    -->
 </RelativeLayout>
