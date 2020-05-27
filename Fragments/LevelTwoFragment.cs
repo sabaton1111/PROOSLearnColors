@@ -71,6 +71,8 @@ namespace PROOSLearnColors.Fragments
             {
                 player = MediaPlayer.Create(Activity, Resource.Raw.hmmThinkAgain);
                 player.Start();
+                //wait to 2 sec
+                rightBlock.Player.Start();
             }
         }
 
@@ -89,6 +91,8 @@ namespace PROOSLearnColors.Fragments
             {
                 player = MediaPlayer.Create(Activity, Resource.Raw.hmmThinkAgain);
                 player.Start();
+                // wait 2 sec.
+                leftBlock.Player.Start();
             }
 
         }
