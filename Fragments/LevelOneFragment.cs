@@ -19,27 +19,10 @@ namespace PROOSLearnColors.Fragments
         private Block leftBlock = new Block();
         private Block rightBlock = new Block();
 
-        private class Block
+        private int DecideCorrecttAnswer()
         {
-            private ImageView color;
-            private bool isCorrectAnswer;
-            private MediaPlayer player;
-
-            public Block()
-            {
-                isCorrectAnswer = false;
-            }
-
-            public Block(ImageView color, bool isCorrectAnswer, MediaPlayer player)
-            {
-                this.Color = color;
-                this.IsCorrectAnswer = isCorrectAnswer;
-                this.Player = player;
-            }
-
-            public ImageView Color { get => color; set => color = value; }
-            public bool IsCorrectAnswer { get => isCorrectAnswer; set => isCorrectAnswer = value; }
-            public MediaPlayer Player { get => player; set => player = value; }
+            Random rnd = new Random();
+            return rnd.Next(0, 2); // 0 - Left color is correct, 1 - right
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -47,7 +30,7 @@ namespace PROOSLearnColors.Fragments
             View view = inflater.Inflate(Resource.Layout.level_one_fragment, container, false);
             leftBlock.Color = view.FindViewById<ImageView>(Resource.Id.imageViewLeftBox);
             rightBlock.Color = view.FindViewById<ImageView>(Resource.Id.imageViewRightBox);
-            GenerateRandomColorAndSetPlayer(leftBlock, rightBlock);
+            GenerateRandomColorAndSetMediaPlayer(leftBlock, rightBlock);
             leftBlock.Color.Click += LeftBlock_Click;
             rightBlock.Color.Click += RightBlock_Click;
 
@@ -110,7 +93,7 @@ namespace PROOSLearnColors.Fragments
             
         }
 
-        private void GenerateRandomColorAndSetPlayer(Block leftBlock, Block rightBlock)
+        private void GenerateRandomColorAndSetMediaPlayer(Block leftBlock, Block rightBlock)
         {
             Random rnd = new Random();
             int pickedLeftColor = rnd.Next(0, 6);
@@ -119,7 +102,6 @@ namespace PROOSLearnColors.Fragments
             {
                 pickedRightColor = rnd.Next(0, 6);
             }
-            //Getting image id(from drawable folder in Resources)
             int resourceId;
 
             switch (pickedLeftColor)
@@ -193,10 +175,5 @@ namespace PROOSLearnColors.Fragments
             }
         }
 
-        private int DecideCorrecttAnswer()
-        {
-            Random rnd = new Random();
-            return rnd.Next(0, 2); // 0 - Left color is correct, 1 - right
-        }
     }
 }

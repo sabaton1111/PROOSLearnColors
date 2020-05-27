@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Fragments\ChooseLevelFragment.cs" />
+    <Compile Include="Fragments\Block.cs" />
     <Compile Include="Fragments\LevelOneFragment.cs" />
     <Compile Include="Fragments\LevelThreeFragment.cs" />
     <Compile Include="Fragments\LevelTwoFragment.cs" />
