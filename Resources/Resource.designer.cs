@@ -3154,94 +3154,115 @@ namespace PROOSLearnColors
 			public const int blue_color = 2131165277;
 			
 			// aapt resource value: 0x7F07005E
-			public const int design_bottom_navigation_item_background = 2131165278;
+			public const int brown = 2131165278;
 			
 			// aapt resource value: 0x7F07005F
-			public const int design_fab_background = 2131165279;
+			public const int darkGreen = 2131165279;
 			
 			// aapt resource value: 0x7F070060
-			public const int design_ic_visibility = 2131165280;
+			public const int design_bottom_navigation_item_background = 2131165280;
 			
 			// aapt resource value: 0x7F070061
-			public const int design_ic_visibility_off = 2131165281;
+			public const int design_fab_background = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int design_password_eye = 2131165282;
+			public const int design_ic_visibility = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int design_snackbar_background = 2131165283;
+			public const int design_ic_visibility_off = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int green_color = 2131165284;
+			public const int design_password_eye = 2131165284;
 			
 			// aapt resource value: 0x7F070065
-			public const int ic_mtrl_chip_checked_black = 2131165285;
+			public const int design_snackbar_background = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int ic_mtrl_chip_checked_circle = 2131165286;
+			public const int gray = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int ic_mtrl_chip_close_circle = 2131165287;
+			public const int green_color = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int mtrl_snackbar_background = 2131165288;
+			public const int ic_mtrl_chip_checked_black = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int mtrl_tabs_default_indicator = 2131165289;
+			public const int ic_mtrl_chip_checked_circle = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int navigation_empty_icon = 2131165290;
+			public const int ic_mtrl_chip_close_circle = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int notification_action_background = 2131165291;
+			public const int lightBlue = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int notification_bg = 2131165292;
+			public const int mtrl_snackbar_background = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int notification_bg_low = 2131165293;
+			public const int mtrl_tabs_default_indicator = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int notification_bg_low_normal = 2131165294;
+			public const int navigation_empty_icon = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int notification_bg_low_pressed = 2131165295;
+			public const int notification_action_background = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int notification_bg_normal = 2131165296;
+			public const int notification_bg = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int notification_bg_normal_pressed = 2131165297;
+			public const int notification_bg_low = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int notification_icon_background = 2131165298;
+			public const int notification_bg_low_normal = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int notification_template_icon_bg = 2131165299;
+			public const int notification_bg_low_pressed = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int notification_template_icon_low_bg = 2131165300;
+			public const int notification_bg_normal = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int notification_tile_bg = 2131165301;
+			public const int notification_bg_normal_pressed = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int notify_panel_notification_icon_bg = 2131165302;
+			public const int notification_icon_background = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int red_color = 2131165303;
+			public const int notification_template_icon_bg = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int tooltip_frame_dark = 2131165304;
+			public const int notification_template_icon_low_bg = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int tooltip_frame_light = 2131165305;
+			public const int notification_tile_bg = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int white_color = 2131165306;
+			public const int notify_panel_notification_icon_bg = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int yellow_color = 2131165307;
+			public const int orange = 2131165307;
+			
+			// aapt resource value: 0x7F07007C
+			public const int pink = 2131165308;
+			
+			// aapt resource value: 0x7F07007D
+			public const int purple = 2131165309;
+			
+			// aapt resource value: 0x7F07007E
+			public const int red_color = 2131165310;
+			
+			// aapt resource value: 0x7F07007F
+			public const int tooltip_frame_dark = 2131165311;
+			
+			// aapt resource value: 0x7F070080
+			public const int tooltip_frame_light = 2131165312;
+			
+			// aapt resource value: 0x7F070081
+			public const int white_color = 2131165313;
+			
+			// aapt resource value: 0x7F070082
+			public const int yellow_color = 2131165314;
 			
 			static Drawable()
 			{
@@ -4217,46 +4238,52 @@ namespace PROOSLearnColors
 			public const int blueColor = 2131623937;
 			
 			// aapt resource value: 0x7F0E0002
-			public const int correctAnswer = 2131623938;
+			public const int brownColor = 2131623938;
 			
 			// aapt resource value: 0x7F0E0003
-			public const int darkGreenColor = 2131623939;
+			public const int correctAnswer = 2131623939;
 			
 			// aapt resource value: 0x7F0E0004
-			public const int greenColor = 2131623940;
+			public const int darkGreenColor = 2131623940;
 			
 			// aapt resource value: 0x7F0E0005
-			public const int hmmThinkAgain = 2131623941;
+			public const int grayColor = 2131623941;
 			
 			// aapt resource value: 0x7F0E0006
-			public const int lightBlueColor = 2131623942;
+			public const int greenColor = 2131623942;
 			
 			// aapt resource value: 0x7F0E0007
-			public const int orangeColor = 2131623943;
+			public const int hmmThinkAgain = 2131623943;
 			
 			// aapt resource value: 0x7F0E0008
-			public const int pinkColor = 2131623944;
+			public const int lightBlueColor = 2131623944;
 			
 			// aapt resource value: 0x7F0E0009
-			public const int plop_sound = 2131623945;
+			public const int orangeColor = 2131623945;
 			
 			// aapt resource value: 0x7F0E000A
-			public const int purpleColor = 2131623946;
+			public const int pinkColor = 2131623946;
 			
 			// aapt resource value: 0x7F0E000B
-			public const int redColor = 2131623947;
+			public const int plop_sound = 2131623947;
 			
 			// aapt resource value: 0x7F0E000C
-			public const int rememberObjects = 2131623948;
+			public const int purpleColor = 2131623948;
 			
 			// aapt resource value: 0x7F0E000D
-			public const int whatWasTheColor = 2131623949;
+			public const int redColor = 2131623949;
 			
 			// aapt resource value: 0x7F0E000E
-			public const int whiteColor = 2131623950;
+			public const int rememberObjects = 2131623950;
 			
 			// aapt resource value: 0x7F0E000F
-			public const int yellowColor = 2131623951;
+			public const int whatWasTheColor = 2131623951;
+			
+			// aapt resource value: 0x7F0E0010
+			public const int whiteColor = 2131623952;
+			
+			// aapt resource value: 0x7F0E0011
+			public const int yellowColor = 2131623953;
 			
 			static Raw()
 			{
