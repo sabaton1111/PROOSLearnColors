@@ -1,63 +1,70 @@
 
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/background_levels"
     android:minWidth="25px"
     android:minHeight="25px">
+
     <ImageView
-        android:layout_width="550px"
-        android:layout_height="550px"
-        android:scaleType="centerCrop"
+        android:layout_width="400px"
+        android:layout_height="400px"
+        android:scaleType="fitXY"
         android:adjustViewBounds="true"
         android:id="@+id/imageViewLeftBox"
-        android:layout_marginTop="200px"
+        android:layout_marginTop="300px"
         android:layout_marginLeft="200px"/>
 
     <ImageView
-        android:layout_width="550px"
-        android:layout_height="550px"
-        android:scaleType="centerCrop"
+        android:layout_width="400px"
+        android:layout_height="400px"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:id="@+id/imageViewMiddleBox"
+        android:layout_marginTop="300px"
+        android:layout_marginLeft="700px"/>
+
+    <ImageView
+        android:layout_width="400px"
+        android:layout_height="400px"
+        android:scaleType="fitXY"
         android:adjustViewBounds="true"
         android:id="@+id/imageViewRightBox"
-        android:layout_marginTop="200px"
-        android:layout_marginLeft="1000px"/>
-
+        android:layout_marginTop="300px"
+        android:layout_marginLeft="1200px"/>
     <ImageView
         android:background="@mipmap/home_icon"
         android:layout_width="200px"
         android:layout_height="100px"
         android:scaleType="centerCrop"
         android:layout_below="@+id/imageViewLeftBox"
-        android:adjustViewBounds="true"
         android:id="@+id/imageViewHome"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20px"
-        android:layout_marginTop="50px"
+        android:layout_marginTop="100px"
         android:layout_marginLeft="20px"/>
     <ImageView
         android:background="@mipmap/speaker"
         android:layout_width="200px"
         android:layout_height="100px"
-        android:scaleType="centerCrop"
+        android:scaleType="fitXY"
         android:layout_below="@+id/imageViewLeftBox"
-        android:adjustViewBounds="true"
         android:id="@+id/imageViewSound"
-        android:layout_marginTop="50px"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginTop="100px"
         android:layout_marginBottom="20px"
         android:layout_marginRight="20px"/>
-                 <ImageView
-        android:background="@mipmap/one"
-        android:layout_width="150px"
-        android:layout_height="230px"
+            <ImageView
+        android:background="@mipmap/three"
+        android:layout_width="200px"
+        android:layout_height="200px"
         android:scaleType="centerCrop"
         android:adjustViewBounds="true"
-        android:id="@+id/imageViewLevel"
+        android:id="@+id/imageViewHomeLevelThree"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="20px"

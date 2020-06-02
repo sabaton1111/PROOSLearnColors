@@ -1,0 +1,53 @@
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background_levels"
+    android:minWidth="25px"
+    android:minHeight="25px">
+     <ImageView
+        android:layout_width="800px"
+        android:layout_height="800px"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:id="@+id/imageViewMiddleBoxOne"
+        android:layout_marginTop="100px"
+        android:layout_marginLeft="500px"/>
+    <ImageView
+        android:background="@mipmap/home_icon"
+        android:layout_width="200px"
+        android:layout_height="170px"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:id="@+id/imageViewHome"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20px"
+
+        android:layout_marginLeft="20px"/>
+        <ImageView
+        android:background="@mipmap/three"
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:id="@+id/imageViewHomeASd"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20px"
+
+        android:layout_marginLeft="20px"/>
+ <ImageView
+        android:background="@mipmap/speaker"
+        android:layout_width="200px"
+        android:layout_height="150px"
+        android:scaleType="fitXY"
+        android:id="@+id/imageViewSound"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="100px"
+        android:layout_marginBottom="20px"
+        android:layout_marginRight="20px"/>
+</RelativeLayout>

@@ -4,16 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/image_layout"
-    android:background="@color/backgroundColor">
-   <ImageView
-android:layout_alignParentTop="true"
+    android:background="@mipmap/background">
+
+    <ImageView
+        android:layout_alignParentTop="true"
         android:src="@mipmap/question"
-       android:layout_width="100px"
-       android:layout_height="200px"
-    android:layout_alignParentRight="true"
-    android:layout_marginTop="20px"
-    android:layout_marginRight="20px"/>
-        <ImageView
+        android:id="@+id/buttonHelp"
+        android:layout_width="100px"
+        android:layout_height="200px"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20px"
+        android:layout_marginRight="20px"/>
+    <ImageView
         android:src="@mipmap/sun_240dpi"
         android:layout_marginTop="30px"
         android:layout_width="wrap_content"
@@ -23,35 +25,35 @@ android:layout_alignParentTop="true"
         android:minHeight="25px"
         android:id="@+id/imageViewSun" />
 
-        <ImageView
-            android:src="@mipmap/two"
+    <ImageView
+        android:src="@mipmap/two"
         android:layout_marginLeft="750px"
         android:layout_below="@+id/imageViewSun"
-            android:layout_width="250px"
-            android:layout_height="400px"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_centerVertical="true"
-            android:id="@+id/imageViewLevelTwo" />
-        <ImageView
-            android:src="@mipmap/one"
+        android:layout_width="250px"
+        android:layout_height="400px"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_centerVertical="true"
+        android:id="@+id/imageViewLevelTwo" />
+    <ImageView
+        android:src="@mipmap/one"
         android:layout_marginTop="40px"
         android:layout_marginLeft="350px"
         android:layout_below="@+id/imageViewSun"
-            android:layout_width="200px"
-            android:layout_height="350px"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:id="@+id/imageViewLevelOne" />
-        <ImageView
+        android:layout_width="200px"
+        android:layout_height="350px"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/imageViewLevelOne" />
+    <ImageView
         android:layout_marginTop="-50px"
-            android:src="@mipmap/three"
+        android:src="@mipmap/three"
         android:layout_marginLeft="1150px"
         android:layout_below="@+id/imageViewSun"
-             android:layout_width="300px"
-            android:layout_height="500px"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:id="@+id/imageViewLevelThree"/>
+        android:layout_width="300px"
+        android:layout_height="500px"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/imageViewLevelThree"/>
 
 </RelativeLayout>

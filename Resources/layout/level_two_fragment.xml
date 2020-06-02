@@ -32,7 +32,7 @@
         android:scaleType="centerCrop"
         android:layout_below="@+id/imageViewLeftBox"
         android:adjustViewBounds="true"
-        android:id="@+id/imageViewHome"
+        android:id="@+id/imageViewHomeButtonLevelTwo"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20px"
@@ -51,13 +51,13 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20px"
         android:layout_marginRight="20px"/>
-                 <ImageView
-        android:background="@mipmap/one"
+                <ImageView
+        android:background="@mipmap/two"
         android:layout_width="150px"
         android:layout_height="230px"
         android:scaleType="centerCrop"
         android:adjustViewBounds="true"
-        android:id="@+id/imageViewLevel"
+        android:id="@+id/imageViewHomeASd"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="20px"

@@ -18,7 +18,14 @@ namespace PROOSLearnColors.Fragments
         private MediaPlayer player;
         private Block leftBlock = new Block();
         private Block rightBlock = new Block();
+        private ImageView homeButton;
+        private ImageView soundButton;
 
+        public int CountCorrectAnswers { get; set; }
+        public LevelOneFragment(int countCorrectAnswers)
+        {
+            CountCorrectAnswers = countCorrectAnswers;
+        }
         private int DecideCorrecttAnswer()
         {
             Random rnd = new Random();
@@ -30,6 +37,10 @@ namespace PROOSLearnColors.Fragments
             View view = inflater.Inflate(Resource.Layout.level_one_fragment, container, false);
             leftBlock.Color = view.FindViewById<ImageView>(Resource.Id.imageViewLeftBox);
             rightBlock.Color = view.FindViewById<ImageView>(Resource.Id.imageViewRightBox);
+            homeButton = view.FindViewById<ImageView>(Resource.Id.imageViewHome);
+            soundButton = view.FindViewById<ImageView>(Resource.Id.imageViewSound);
+            homeButton.Click += HomeButton_Click;
+            soundButton.Click += SoundButton_Click;
             GenerateRandomColorAndSetMediaPlayer(leftBlock, rightBlock);
             leftBlock.Color.Click += LeftBlock_Click;
             rightBlock.Color.Click += RightBlock_Click;
@@ -56,22 +67,57 @@ namespace PROOSLearnColors.Fragments
             return view;
         }
 
+        private void SoundButton_Click(object sender, EventArgs e)
+        {
+
+            player = MediaPlayer.Create(Activity, Resource.Raw.plop_sound);
+            player.Start();
+
+            if (leftBlock.IsCorrectAnswer)
+            {
+                leftBlock.Player.Start();
+            }
+            else
+            {
+                rightBlock.Player.Start();
+            }
+        }
+
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            player = MediaPlayer.Create(Activity, Resource.Raw.plop_sound);
+            player.Start();
+            Android.Support.V4.App.Fragment fragmentLogin = new ChooseLevelFragment();
+            FragmentManager.BeginTransaction().Replace(Resource.Id.parent_fragment, fragmentLogin).Commit();
+        }
+
         private void LeftBlock_Click(object sender, EventArgs e)
         {
             player = MediaPlayer.Create(Activity, Resource.Raw.plop_sound);
             player.Start();
             if (leftBlock.IsCorrectAnswer)
             {
+                CountCorrectAnswers++;
                 player = MediaPlayer.Create(Activity, Resource.Raw.correctAnswer);
                 player.Start();
-                Android.Support.V4.App.Fragment fragmentLogin = new LevelOneFragment();
-                FragmentManager.BeginTransaction().Replace(Resource.Id.parent_fragment, fragmentLogin).Commit();
+                if (CountCorrectAnswers == 5)
+                {
+                    Android.Support.V4.App.Fragment fragmentLogin = new YouTubeVideo();
+                    FragmentManager.BeginTransaction().Replace(Resource.Id.parent_fragment, fragmentLogin).Commit();
+
+                }
+                else
+                {
+                    Android.Support.V4.App.Fragment fragmentLogin = new LevelOneFragment(CountCorrectAnswers);
+                    FragmentManager.BeginTransaction().Replace(Resource.Id.parent_fragment, fragmentLogin).Commit();
+
+                }
             }
             else
             {
                 player = MediaPlayer.Create(Activity, Resource.Raw.hmmThinkAgain);
                 player.Start();
-            }            
+            }
         }
 
         private void RightBlock_Click(object sender, EventArgs e)
@@ -80,17 +126,28 @@ namespace PROOSLearnColors.Fragments
             player.Start();
             if (rightBlock.IsCorrectAnswer)
             {
+                CountCorrectAnswers++;
                 player = MediaPlayer.Create(Activity, Resource.Raw.correctAnswer);
                 player.Start();
-                Android.Support.V4.App.Fragment fragmentLogin = new LevelOneFragment();
-                FragmentManager.BeginTransaction().Replace(Resource.Id.parent_fragment, fragmentLogin).Commit();
+                if (CountCorrectAnswers == 5)
+                {
+                    Android.Support.V4.App.Fragment fragmentLogin = new YouTubeVideo();
+                    FragmentManager.BeginTransaction().Replace(Resource.Id.parent_fragment, fragmentLogin).Commit();
+
+                }
+                else
+                {
+                    Android.Support.V4.App.Fragment fragmentLogin = new LevelOneFragment(CountCorrectAnswers);
+                    FragmentManager.BeginTransaction().Replace(Resource.Id.parent_fragment, fragmentLogin).Commit();
+
+                }
             }
             else
             {
                 player = MediaPlayer.Create(Activity, Resource.Raw.hmmThinkAgain);
                 player.Start();
             }
-            
+
         }
 
         private void GenerateRandomColorAndSetMediaPlayer(Block leftBlock, Block rightBlock)
