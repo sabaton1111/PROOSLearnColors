@@ -14,7 +14,7 @@
         android:adjustViewBounds="true"
         android:id="@+id/imageViewLeftBox"
         android:layout_marginTop="200px"
-        android:layout_marginLeft="200px"/>
+        android:layout_marginLeft="@dimen/left_margin_value"/>
 
     <ImageView
         android:layout_width="550px"
@@ -23,7 +23,7 @@
         android:adjustViewBounds="true"
         android:id="@+id/imageViewRightBox"
         android:layout_marginTop="200px"
-        android:layout_marginLeft="1000px"/>
+        android:layout_marginLeft="@dimen/left_margin_value"/>
 
     <ImageView
         android:background="@mipmap/home_icon"
