@@ -30,9 +30,51 @@ namespace PROOSLearnColors.Fragments
             WebSettings settings = webview.Settings;
             settings.JavaScriptEnabled = true;
             webview.SetWebChromeClient(new WebChromeClient());
-            webview.LoadUrl("https://www.youtube.com/embed/gavT_q9CLME");
-            
+            LoadRandomUrl(webview);
+
             return view;
+        }
+
+        private void LoadRandomUrl(WebView webview)
+        {
+            Random radnom = new Random();
+            int n = radnom.Next(0, 11);
+            switch (n)
+            {
+                case 0://zhaba zhaburana
+                    webview.LoadUrl("https://www.youtube.com/embed/eiT3b4zM_DA");
+                    break;
+                case 1://Spok-a Dudle
+                    webview.LoadUrl("https://www.youtube.com/embed/fK7PEb3Ap4A");
+                    break;
+                case 2://Zaicheto Bialo
+                    webview.LoadUrl("https://www.youtube.com/embed/ndTVqwfzkA4");
+                    break;
+                case 3://Cvetovete
+                    webview.LoadUrl("https://www.youtube.com/embed/hjswb6xnHdw");
+                    break;
+                case 4://Happy and you know it
+                    webview.LoadUrl("https://www.youtube.com/embed/M6LoRZsHMSs");
+                    break;
+                case 5://What Color Am I Wearing?
+                    webview.LoadUrl("https://www.youtube.com/embed/TCYVm0aS-Ks");
+                    break;
+                case 6://Aram zam zam
+                    webview.LoadUrl("https://www.youtube.com/embed/d8IJpspU2m0");
+                    break;
+                case 7://5 malki pateta
+                    webview.LoadUrl("https://www.youtube.com/embed/pwqLXrWMbj0");
+                    break;
+                case 8: // kravata lola
+                    webview.LoadUrl("https://www.youtube.com/embed/yVEqtpr-OQs");
+                    break;
+                case 9://kolelata na avtobusa
+                    webview.LoadUrl("https://www.youtube.com/embed/cW1Dx9GbQz4");
+                    break;
+                case 10://kucheto Bingo
+                    webview.LoadUrl("https://www.youtube.com/embed/tx5Qb2K2nkA");
+                    break;                
+            }
         }
 
         private void SkipButton_Click(object sender, EventArgs e)
